@@ -10,7 +10,7 @@ public class LinkedListUtil<T> {
   public Integer addDigit(Integer digit, Node<Integer> head) {
 
     Integer carry = 0;
-    if(digit <= 9){
+    if(digit >= 0 && digit <= 9){
       // next is null if it is LSB
       if(head.next != null) {
         // Move towards LSB bit.
@@ -58,10 +58,27 @@ public class LinkedListUtil<T> {
     return returNode;
   }
 
+  /**
+   * Get the nod at fromHere index.
+   */
   private Node<T> getNthNode(Node<T> head, int fromHere) {
 
     if(fromHere > 1 && Objects.nonNull(head))
       return this.getNthNode(head.next, --fromHere);
+    return head;
+  }
+
+  public Node<Integer> oddEvenGroup(Node<Integer> head, boolean oddFirst) {
+    if(Objects.nonNull(head)){
+      Node<Integer> current = head;
+      Node<Integer> evens = null;
+      Node<Integer> odds = null;
+      while(Objects.nonNull(current)){
+        if(current.data.intValue() % 2 == 0){
+          evens = current;
+        }
+      }
+    }
     return head;
   }
 }

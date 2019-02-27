@@ -22,7 +22,7 @@ package com.test.linkedlist;
  * 
  * Output list: [3][4][5]
  *  
- * Example 2:
+ * Example 3:
  * input list: [1][2][3][4][5]
  * starting from: 5
  * Remove node: 2

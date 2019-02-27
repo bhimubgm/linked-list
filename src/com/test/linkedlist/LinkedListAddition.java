@@ -36,7 +36,7 @@ public class LinkedListAddition {
   
   public static Node<Integer> addDigit(Integer digit, Node<Integer> head) {
    
-    LinkedListUtil listUtil = new LinkedListUtil();
+    LinkedListUtil<Integer> listUtil = new LinkedListUtil<>();
     
     // This method adds the give digit to the LSB of list and return carriage if any.
     Integer carry = listUtil.addDigit(digit, head);
